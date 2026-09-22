@@ -9,6 +9,7 @@ My macOS development setup.
 | **Shell** | `zshrc`, `zprofile` | Oh My Zsh, plugins, zoxide, PATH |
 | **Git** | `gitconfig`, `gitignore` | Identity, editor, global ignores |
 | **Starship** | `starship.toml` | Prompt |
+| **Ghostty** | `config.ghostty` | Terminal (cmux reads it too) |
 | **Karabiner** | `karabiner.json` | Caps Lock -> Hyper key |
 | **Agents** | `agents/skills/` | Skills shared by Claude Code, Codex and Pi |
 | **Claude Code** | `statusline-command.sh` | Statusline (`settings.json` deliberately not tracked) |

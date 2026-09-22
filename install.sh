@@ -126,6 +126,18 @@ link "$DOTFILES/git/gitignore" "$HOME/.config/git/ignore"
 echo "Starship..."
 link "$DOTFILES/starship/starship.toml" "$HOME/.config/starship.toml"
 
+# Ghostty. XDG path so it sits beside the other configs; the macOS
+# Application Support copy would also load, so move that one aside.
+echo "Ghostty..."
+link "$DOTFILES/ghostty/config.ghostty" "$HOME/.config/ghostty/config.ghostty"
+for legacy in "$HOME/Library/Application Support/com.mitchellh.ghostty/config"{,.ghostty}; do
+  if [ -f "$legacy" ] && [ ! -L "$legacy" ]; then
+    mkdir -p "$BACKUP_DIR"
+    mv "$legacy" "$BACKUP_DIR/ghostty-$(basename "$legacy")"
+    echo "  moved $legacy to backup"
+  fi
+done
+
 # Karabiner
 echo "Karabiner..."
 link "$DOTFILES/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"

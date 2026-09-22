@@ -1,0 +1,18 @@
+# Ghostty config. Only non-defaults; see `ghostty +show-config --default --docs`.
+
+# Minimal chrome: balanced padding in the background color
+window-padding-balance = true
+window-padding-color = background
+window-theme = auto
+
+background-opacity = 0.85
+background-blur = 25
+
+# Surface terminal bells (e.g. Claude Code alerts) as system notifications
+bell-features = system,audio,attention,title
+
+# Quake-style drop-down terminal from anywhere (needs Accessibility permission)
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+
+shell-integration-features = true
+macos-option-as-alt = true
