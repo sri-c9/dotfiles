@@ -1,0 +1,20 @@
+[user]
+	name = Sri Chandramouli
+	email = 54337081+sri-c9@users.noreply.github.com
+[core]
+	editor = zed --wait
+[push]
+	autoSetupRemote = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[fetch]
+	prune = true
+# Machine-specific overrides (e.g. a work email/name) go in an untracked
+# local file so they never leak into this shared repo. Same pattern as
+# shell/zshrc's ~/.zshenv.local. Must come last so it wins.
+[include]
+	path = ~/.gitconfig.local

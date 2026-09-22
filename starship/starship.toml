@@ -1,0 +1,11 @@
+# Starship Configuration
+
+# Disable gcloud context display
+[gcloud]
+disabled = true
+
+# Only show Python when a virtualenv or conda env is explicitly active
+[python]
+detect_files = []
+detect_extensions = []
+detect_folders = []

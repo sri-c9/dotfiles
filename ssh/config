@@ -1,0 +1,10 @@
+# Machine-specific host blocks (e.g. a separate work identity/key) go in an
+# untracked local file so they never leak into this shared repo. Included
+# first so its directives win over the ones below for matching hosts.
+Include ~/.ssh/config.local
+
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+

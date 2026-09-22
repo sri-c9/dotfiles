@@ -1,0 +1,13 @@
+{
+  "lastChangelogVersion": "0.83.0",
+  "defaultProvider": "openrouter",
+  "defaultModel": "moonshotai/kimi-k3",
+  "defaultThinkingLevel": "high",
+  "hideThinkingBlock": true,
+  "theme": "islands-dark-true",
+  "packages": [
+    "npm:pi-ghostty",
+    "npm:pi-subagents",
+    "git:github.com/illusivejosiah/pi-zed-shift-enter"
+  ]
+}
