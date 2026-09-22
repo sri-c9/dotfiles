@@ -12,7 +12,8 @@ My macOS development setup.
 | **Ghostty** | `config.ghostty` | Terminal (cmux reads it too) |
 | **Karabiner** | `karabiner.json` | Caps Lock -> Hyper key |
 | **Agents** | `agents/skills/` | Skills shared by Claude Code, Codex and Pi |
-| **Claude Code** | `statusline-command.sh` | Statusline (`settings.json` deliberately not tracked) |
+| **Helix** | `config.toml` | Editor |
+| **Claude Code** | `statusline-command.sh`, `ccstatusline/settings.json` | Statusline script, plus a [ccstatusline](https://github.com/sirmalloc/ccstatusline) layout (`settings.json` deliberately not tracked) |
 | **gh** | `config.yml` | GitHub CLI (never `hosts.yml` - auth token) |
 | **Pi** | `settings.json` | Agent config |
 | **SSH** | `config` | GitHub host block (keys are NOT tracked) |
@@ -57,7 +58,7 @@ To push changes later, switch the remote to SSH once a key is set up:
 
 Answering yes to the work-machine prompt:
 
-- Skips every agent config (skills, Claude statusline, Pi): nothing from a
+- Skips every agent config (skills, Claude statusline, ccstatusline, Pi): nothing from a
   personal machine's agent setup is carried over
 - Prompts for a work email/name and writes `~/.gitconfig.local`
 - Optionally generates a separate `~/.ssh/id_ed25519_work` key and writes

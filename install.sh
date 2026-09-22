@@ -41,7 +41,7 @@ fi
 
 if [ "$WORK_MACHINE" = "1" ]; then
   export DOTFILES_SKIP_AGENTS=1
-  echo "  agent configs (skills, Claude statusline, Pi) will be skipped"
+  echo "  agent configs (skills, Claude statusline, ccstatusline, Pi) will be skipped"
 
   if [ ! -f "$HOME/.gitconfig.local" ] || [ ! -f "$HOME/.ssh/config.local" ]; then
     read -p "  work email (for git identity + SSH key): " work_email
@@ -138,6 +138,10 @@ for legacy in "$HOME/Library/Application Support/com.mitchellh.ghostty/config"{,
   fi
 done
 
+# Helix
+echo "Helix..."
+link "$DOTFILES/helix/config.toml" "$HOME/.config/helix/config.toml"
+
 # Karabiner
 echo "Karabiner..."
 link "$DOTFILES/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
@@ -179,6 +183,7 @@ else
 
   # Tool-specific files.
   link "$DOTFILES/claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
+  link "$DOTFILES/ccstatusline/settings.json" "$HOME/.config/ccstatusline/settings.json"
   link "$DOTFILES/pi/settings.json" "$HOME/.pi/agent/settings.json"
 fi
 
